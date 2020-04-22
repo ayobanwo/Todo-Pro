@@ -1,10 +1,11 @@
   // Define Ui vars
 
-  const form = document.querySelector('#task-form');
-  const taskList = document.querySelector('.collection');
-  const clearBtn = document.querySelector('.clear-tasks');
-  const filter = document.querySelector('#filter');
-  const tasksInput = document.querySelector('#task');
+  const
+  	 form = document.querySelector('#task-form'),
+ 	 taskList = document.querySelector('.collection'),
+ 	 clearBtn = document.querySelector('.clear-tasks'),
+ 	 filter = document.querySelector('#filter'),
+ 	 tasksInput = document.querySelector('#task');
 
 // load all event listeners  
 loadEventListeners();
@@ -50,7 +51,10 @@ function addTask(e){
 
 //Remove
 function removeTask(e){
+	//check if parent element has a child with the class 'delete-item'
+	//i.e li has a child "a" which has the class "delete-item"
 	if(e.target.parentElement.classList.contains('delete-item')){
+		//remove parent element i.e "li"
 		e.target.parentElement.parentElement.remove();		
 	}
 };
@@ -65,10 +69,13 @@ function filterTasks(e){
 	document.querySelectorAll('.collection-item').forEach(function(task) {
 		const item = task.firstChild.textContent;
 
+		//Check if typed text is contained in the item
 		if (item.toLowerCase().indexOf(text) != -1 ) {
+			//display item if typed text is contained in the item text
 			task.style.display = 'block';
 		}
 		else{
+			//do not display item if typed text is not contained in the item text
 			task.style.display = 'none';
 		}
 	})	;
