@@ -8,9 +8,9 @@
  	 tasksInput = document.querySelector('#task');
 
 // load all event listeners  
-loadEventListeners();
 
-function loadEventListeners() {
+
+
 	// DOM Load Event
 	document.addEventListener('DOMContentLoaded', getTasks);
 	//Add tasks event
@@ -21,7 +21,7 @@ function loadEventListeners() {
 	clearBtn.addEventListener('click', clearTasks);
 	//Filter Tasks
 	filter.addEventListener('keyup', filterTasks);
-}
+
 
 // Get Tasks from Local Storage
 function getTasks(){
