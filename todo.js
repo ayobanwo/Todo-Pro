@@ -7,10 +7,6 @@
  	 filter = document.querySelector('#filter'),
  	 tasksInput = document.querySelector('#task');
 
-// load all event listeners  
-
-
-
 	// DOM Load Event
 	document.addEventListener('DOMContentLoaded', getTasks);
 	//Add tasks event
